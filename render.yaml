@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: call-intelligence
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -- -p $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.0
+      - key: GROQ_API_KEY
+        sync: false
