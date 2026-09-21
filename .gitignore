@@ -46,7 +46,6 @@ next-env.d.ts
 /drizzle/
 /drizzle.config.ts
 /examples/
-/hooks/
 /scripts/
 /cloudflare-env.d.ts
 /vite.config.ts
